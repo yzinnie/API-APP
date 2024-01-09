@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0px;
+}
+
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
+  }
+}
+
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+#root {
+  /* background-color: #000000; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
+  width: 450px;
+  min-height: 100vh;
+}
+
+/* Home */
+.Home {
+  width: 450px;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home .home-img {
+  padding-bottom: 50px;
+}
+
+.Home .home-button {
+  background: #ffffff;
+  width: 172px;
+  height: 88px;
+  top: 402px;
+  left: 94px;
+  border-radius: 20px;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Header */
+.Header {
+  height: 57px;
+  top: 1px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+/* Items */
+.Items ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.Items li {
+  list-style: none;
+  width: 301px;
+  height: 80px;
+  top: 76px;
+  left: 25px;
+  border-radius: 10px;
+  border: 1px solid #0000004d;
+  margin-bottom: 20px;
+}
