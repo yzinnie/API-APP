@@ -77,16 +77,22 @@ body {
 }
 
 /* Items */
-.Items ul {
+.Items {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   padding: 0;
+  padding-top: 10px;
 }
 
-.Items li {
+.Items .item-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
   list-style: none;
   width: 301px;
   height: 80px;
@@ -95,4 +101,34 @@ body {
   border-radius: 10px;
   border: 1px solid #0000004d;
   margin-bottom: 20px;
+}
+
+.Items img {
+  padding-left: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.Items .item-name {
+  width: 75px;
+  height: 23px;
+  padding-top: 9px;
+  padding-left: 9px;
+}
+
+.Items .item-price {
+  padding-top: 50px;
+  padding-right: 10px;
+  margin-left: 67px;
+}
+
+.Items .item-materialType {
+  padding-top: 10px;
+}
+
+.Items .item-materialType button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  size: 18px;
 }

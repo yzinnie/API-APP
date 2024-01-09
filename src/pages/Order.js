@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Items from '../components/Items';
 
-const Order = ({ item }) => {
+const Order = () => {
   return (
     <div className="Order">
       <Header />

@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from '../db/db.json';
 
 const Items = () => {
   return (
     <div className="Items">
-      <ul>
-        {data.items.map((item) => (
-          <li key={item.id}>
-            {item.name}
-            {item.event}
-            {item.materialType}
-            {item.price}
-          </li>
-        ))}
-      </ul>
+      {data.items.map((item) => (
+        <div className="item-list" key={item.id}>
+          <div>
+            <img src={process.env.PUBLIC_URL + `assets/logo-items.svg`} />
+          </div>
+          <div className="item-name">
+            {item.name}{' '}
+            <div className="item-materialType">
+              {' '}
+              <button>-</button>
+              {item.materialType}
+              <button>+</button>
+            </div>
+          </div>
+
+          <div className="item-price">{item.price}원</div>
+        </div>
+      ))}
     </div>
   );
 };
