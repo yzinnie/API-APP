@@ -6,11 +6,11 @@
 ###  API랑 친해지기 🐈
 
 ### 1. openweathermap
-##### 현재 위치의 날씨를 표시한다. 저번 프로젝트에 사용했더니 제일 익숙해서(?) 헤매지 않고 시도해 볼 수 있었다. BUT 난 여러 지역을 표시하고 싶다.. 해보자해보자... 
+##### 현재 위치의 날씨를 표시한다. 프로젝트에 사용한 경험이 있어서 그런지 헤매지 않고 시도해 볼 수 있었다. BUT 난 여러 지역을 표시하고 싶다.. 해보자해보자... 
 
 <img src='https://github.com/yzinnie/API-APP/assets/126447980/dc78ee19-59cb-4cbb-8ce2-a97500ccf24f' width=400px/>
 
-#### 제공하는 아이콘을 사용했다.
+##### 제공하는 아이콘을 사용했다.
 ```
   <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} />
 ```
