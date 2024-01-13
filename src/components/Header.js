@@ -1,10 +1,11 @@
 const Header = () => {
   return (
     <div className="Header">
-      <img
+      {/* <img
         className="header-img"
-        src={process.env.PUBLIC_URL + `assets/logo-header.svg`}
-      />
+        src={process.env.PUBLIC_URL + `assets/logo.svg`}
+      /> */}
+      <p> ⁕ weather ⁕</p>
     </div>
   );
 };

@@ -8,6 +8,8 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 100vh;
   margin: 0px;
@@ -39,7 +41,7 @@ body {
 .Home {
   width: 450px;
   min-height: 100vh;
-  background-color: black;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -49,18 +51,19 @@ body {
 
 .Home .home-img {
   padding-bottom: 50px;
+  width: 150px;
 }
 
 .Home .home-button {
-  background: #ffffff;
-  width: 172px;
-  height: 88px;
+  background: #000000;
+  color: #fff;
+  width: 150px;
+  height: 60px;
   top: 402px;
   left: 94px;
+  border: #fff;
   border-radius: 20px;
-  font-size: 25px;
-  line-height: 30px;
-  letter-spacing: 0em;
+  font-size: 20px;
   text-align: center;
   cursor: pointer;
 }
@@ -73,96 +76,65 @@ body {
   padding-left: 10px;
   display: flex;
   align-items: center;
-  background-color: black;
-  box-shadow: 0px 4px 4px 0px #00000040;
-  position: sticky;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 3px 0px #00000040;
 }
 
-/* Items */
-.Items {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+.Header p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Weather */
+.Weather {
   padding: 0;
-  padding-top: 10px;
+  width: 400px;
+  height: 255px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rgba(93, 88, 88, 0.455);
+  border-radius: 20px;
+  text-align: center;
 }
 
-.Items .item-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  list-style: none;
+.Weather .list {
+  position: relative;
   width: 355px;
-  height: 85px;
-  top: 76px;
+  top: 20px;
   left: 25px;
-  border-radius: 10px;
-  border: 1px solid #0000004d;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.Items img {
-  padding-left: 9px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-}
-
-.Items .item-name {
-  width: 75px;
-  height: 23px;
-  padding-top: 9px;
-  padding-left: 9px;
-}
-
-.Items .item-price {
-  padding-top: 50px;
-  padding-right: 10px;
-  margin-left: 67px;
-}
-
-.Items .item-materialType {
-  padding-top: 15px;
-}
-
-.Items .item-materialType button {
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-  size: 18px;
-}
-
-/* Footer */
-.Footer {
-  width: 450px;
-  height: 170px;
-  position: sticky;
-  bottom: 0;
-  border-radius: 20px 20px 0px 0px;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.Footer button {
+.Weather .name {
   position: relative;
-  background: rgba(0, 0, 0, 1);
-  color: #fff;
-  width: 300px;
-  height: 48px;
-  top: 100px;
-  left: 75px;
-  font-size: 18px;
-  text-align: center;
-  cursor: pointer;
+  font-size: 25px;
 }
 
-.Footer .footer-text {
+.Weather .description {
   position: relative;
-  width: fit-content;
-  left: 280px;
-  top: -25px;
-  font-size: 18px;
+  top: 20px;
+  left: 50px;
+}
+
+.Weather img {
+  position: absolute;
+  top: 30px;
+  left: 125px;
+}
+
+.Weather .temp {
+  position: relative;
+  top: 53px;
+}
+.temp_set {
+  position: relative;
+  top: 60px;
+}
+
+.Map {
+  width: 500px;
+  height: 400px;
 }
