@@ -10,6 +10,11 @@
 
 <img src='https://github.com/yzinnie/API-APP/assets/126447980/dc78ee19-59cb-4cbb-8ce2-a97500ccf24f' width=400px/>
 
+#### 제공하는 아이콘을 사용했다.
+```
+  <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} />
+```
+
 
 
 
