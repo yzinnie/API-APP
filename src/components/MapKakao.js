@@ -1,7 +1,7 @@
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import React, { useEffect, useState } from 'react';
 
-const Map_kakao = () => {
+const MapKakao = () => {
   const [state, setState] = useState({
     center: {
       lat: 33.450701,
@@ -60,4 +60,4 @@ const Map_kakao = () => {
   );
 };
 
-export default Map_kakao;
+export default MapKakao;

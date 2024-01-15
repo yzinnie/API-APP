@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
 import Weather from '../components/Weather';
-import Map_kakao from '../components/Map_kakao';
+import MapKakao from '../components/MapKakao';
 
 const Main = () => {
   return (
-    <div className="Main">
+    <div>
       <Header />
       <Weather />
-      <Map_kakao />
+      <MapKakao />
     </div>
   );
 };
