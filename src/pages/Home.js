@@ -6,10 +6,11 @@ const Home = () => {
     <div className="Home">
       <img
         className="home-img"
-        src={process.env.PUBLIC_URL + `assets/logo.svg`}
+        src={process.env.PUBLIC_URL + `assets/logo.png`}
+        alt="logo"
       />
       <button className="home-button" onClick={() => navigate('/main')}>
-        ⁕ weather ⁕
+        산 Check 하러 가자 !
       </button>
     </div>
   );

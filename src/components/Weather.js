@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const API_KEY = '7840db3f6ea08d7a7a2192e1fa39d4dc';
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?';
 
 const Weather = () => {
   const [position, setPosition] = useState({});
@@ -22,11 +23,11 @@ const Weather = () => {
     }).then((coords) => {
       /* 날씨 API 요청하기 */
       fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}&lang=kr&units=metric`
+        `${BASE_URL}lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}&lang=kr&units=metric`
       )
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
+          // console.log(json);
           setName(json.name);
           setWeather(json.weather[0]);
           setTemp(Math.floor(json.main.temp));
@@ -36,16 +37,18 @@ const Weather = () => {
     });
   }, []);
 
+  const ImgURL = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
+
   return (
     <div className="Weather">
+      <h4>지금 우리동네의 날씨</h4>
       <div className="list">
-        <div className="name">{`${name}`}</div>
+        <img src={`${ImgURL}`} alt="openweathermapIMG" />
         <div className="description">{` ${weather.description} `}</div>
         <div className="temp">{` ${temp}° `} </div>
         <div className="temp_set">
           {` ${minTemp}°`} / {`${maxTemp}°`}
         </div>
-        <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} />
       </div>
     </div>
   );
