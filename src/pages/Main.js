@@ -2,15 +2,17 @@ import React from 'react';
 import Header from '../components/Header';
 import Weather from '../components/Weather';
 import MapKakao from '../components/MapKakao';
-import Info from '../components/Info';
+import NewHeader from '../components/NewHeader';
+import Search from '../components/Search';
 
 const Main = () => {
   return (
     <div>
       <Header />
-      <Info />
+      <NewHeader />
       <Weather />
       <MapKakao />
+      <Search />
     </div>
   );
 };
