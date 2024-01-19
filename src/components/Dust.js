@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
+import Weather from './Weather';
 
-const API_KEY =
-  'stYkwEbjTTjRtja2%2FbsDqZXuskJw2quXY5D4JqFQCdY1A4pFp%2BuEyXUbvfayA0PYFtsgqA4V8x6AO4y%2FFcKHqg%3D%3D';
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL =
   'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?';
 
@@ -10,13 +10,14 @@ const Dust = () => {
 
   useEffect(() => {
     fetch(
-      `${BASE_URL}sidoName=제주&pageNo=1&numOfRows=100&returnType=json&serviceKey=${API_KEY}&ver=1.3`
+      `${BASE_URL}sidoName=서울&pageNo=1&numOfRows=100&returnType=json&serviceKey=${API_KEY}&ver=1.3`
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setDust(data.response.body.items[0]);
-      });
+      })
+      .catch((error) => console.log('error:', error));
   }, []);
 
   const dustGrade = () => {
@@ -26,14 +27,16 @@ const Dust = () => {
       return '보통';
     } else if (`${dust.pm10Grade}` === '3') {
       return '나쁨';
-    } else {
+    } else if (`${dust.pm10Grade}` === '4') {
       return '매우나쁨';
+    } else {
+      return 'Loading...';
     }
   };
 
   return (
     <div className="Dust">
-      <div>{`미세먼지 ${dustGrade()}`} </div>
+      <div>미세먼지 {`${dustGrade()}`} </div>
     </div>
   );
 };
