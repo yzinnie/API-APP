@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import { TypeAnimation } from 'react-type-animation';
+import NewsAPI from '../components/NewsAPI';
 
 const News = () => {
   return (
@@ -8,7 +9,7 @@ const News = () => {
       <div className="search-box">
         <p>
           <TypeAnimation
-            sequence={['검색검색', 1000]}
+            sequence={['네이버에 강아지를 검색했어요', 1000]}
             speed={13}
             wrapper="span"
             cursor={false}
@@ -19,6 +20,7 @@ const News = () => {
           alt="search-icon"
         />
       </div>
+      <NewsAPI />
     </div>
   );
 };

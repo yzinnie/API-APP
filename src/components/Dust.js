@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Weather from './Weather';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL =
@@ -14,7 +13,7 @@ const Dust = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setDust(data.response.body.items[0]);
       })
       .catch((error) => console.log('error:', error));
