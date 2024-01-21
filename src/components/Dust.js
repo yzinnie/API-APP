@@ -14,7 +14,7 @@ const Dust = () => {
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
-        setDust(data.response.body.items[0]);
+        setDust(data.response.body.items[9]);
       })
       .catch((error) => console.log('error:', error));
   }, []);

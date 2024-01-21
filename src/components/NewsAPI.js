@@ -27,7 +27,7 @@ const NewsAPI = () => {
   return (
     <div className="NewsAPI">
       {loading ? (
-        <div>Loading...🐾</div>
+        <div>LOADING...</div>
       ) : (
         <ul className="result-list">
           {news &&
@@ -35,7 +35,7 @@ const NewsAPI = () => {
               <li key={item.link}>
                 <h3 dangerouslySetInnerHTML={{ __html: item.title }}></h3>
                 <h4 dangerouslySetInnerHTML={{ __html: item.description }}></h4>
-                <a href="{item.link}">{item.link}</a>
+                <a href={item.link}>기사 자세히 읽기</a>
               </li>
             ))}
         </ul>
