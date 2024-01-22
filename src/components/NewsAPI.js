@@ -5,7 +5,7 @@ import News from '../pages/News';
 const NewsAPI = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
-  const API_URL = '/v1/search/news?query=강아지';
+  const API_URL = '/v1/search/news?query=반려견&display=20';
 
   useEffect(() => {
     axios
@@ -22,7 +22,6 @@ const NewsAPI = () => {
       })
       .catch((error) => console.log('error:', error));
   }, []);
-  // console.log(news);
 
   return (
     <div className="NewsAPI">

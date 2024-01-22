@@ -87,16 +87,13 @@ body {
 .Header ul {
   list-style: none;
   padding: 10px;
+  height: 100vh;
 }
 
 .Header li {
   padding: 20px 0 19px 26px;
   cursor: pointer;
   font-weight: bold;
-}
-
-.Header li:nth-last-child(1) {
-  padding-bottom: 680px;
 }
 
 .menu {
@@ -221,10 +218,57 @@ body {
 
 .NewsAPI li {
   padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-bottom: 1px solid #5455572e;
-  width: 450px;
 }
 
 .NewsAPI a {
   color: rgba(0, 0, 0, 0.4);
+}
+
+/*CheckList*/
+.CheckList {
+  padding-top: 60px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.CheckList button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.CheckList input {
+  border: 1px solid black;
+  width: 340px;
+  height: 50px;
+  margin-right: 50px;
+  font-size: 16px;
+}
+
+.check-form {
+  height: 550px;
+}
+
+.check-form p {
+  color: #868585;
+  font-size: 16.5px;
 }

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Main from './pages/Main';
 import Info from './pages/Info';
 import News from './pages/News';
+import Diary from './pages/Diary';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/main" element={<Main />} />
           <Route path="/info" element={<Info />} />
           <Route path="/news" element={<News />} />
+          <Route path="/diary" element={<Diary />} />
         </Routes>
       </div>
     </BrowserRouter>

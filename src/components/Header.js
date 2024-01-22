@@ -24,8 +24,8 @@ const Header = () => {
       <div className="menu">
         <ul className={isOpen ? 'navLinks showNav' : 'hidden'}>
           <li onClick={() => navigate('/info')}>산 check?</li>
-          <li>동물들의 이야기</li>
-          <li onClick={() => navigate('/news')}>오늘의 기사</li>
+          <li onClick={() => navigate('/diary')}>산책 일기</li>
+          <li onClick={() => navigate('/news')}>오늘의 반려견 뉴스</li>
         </ul>
       </div>
     </div>

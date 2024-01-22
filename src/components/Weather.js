@@ -42,7 +42,7 @@ const Weather = () => {
 
   return (
     <div className="Weather">
-      <h4>지금 우리동네의 날씨</h4>
+      <h3>우리동네 날씨</h3>
       <div className="list">
         <img src={`${ImgURL}`} alt="openweathermapIMG" />
         <div className="description">{` ${weather.description} `}</div>
