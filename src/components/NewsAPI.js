@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import News from '../pages/News';
 
 const NewsAPI = () => {
   const [news, setNews] = useState([]);
