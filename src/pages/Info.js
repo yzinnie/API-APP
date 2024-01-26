@@ -29,17 +29,3 @@ const Info = () => {
 };
 
 export default Info;
-
-/* InFo 
-.Info {
-  top: 10px;
-  width: 100%;
-  height: 500px;
-  background-color: #f7f7f75c;
-  border-radius: 10%;
-}
-
-.info-text {
-  padding-top: 20px;
-  padding-left: 15px;
-}*/

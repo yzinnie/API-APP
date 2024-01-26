@@ -51,12 +51,7 @@ const CheckList = () => {
           onChange={(e) => setTask(e.target.value)}
           onKeyDown={(e) => handleKeyPress(e)}
         />
-        <button
-          onClick={handleAddTodo}
-          src={process.env.PUBLIC_URL + `assets/icon-check.svg`}
-        >
-          등록
-        </button>
+        <button onClick={handleAddTodo}>등록</button>
 
         <ul className="todo-list">
           {todos.map((todo, index) => (
