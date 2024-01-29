@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Dust from './Dust';
 
-const API_KEY = '7840db3f6ea08d7a7a2192e1fa39d4dc';
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?';
 
 const Weather = () => {
