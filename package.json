@@ -1,6 +1,6 @@
 {
   "homepage": "https://yzinnie.github.io/SAN-CHECK",
-  "name": "order-app",
+  "name": "san-check",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
