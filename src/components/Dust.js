@@ -1,71 +1,43 @@
 import { useEffect, useState } from 'react';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const KAKAO_API_KEY = process.env.REACT_APP_KAKAOREST_API_KEY;
+const BASE_URL =
+  'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?';
 
 const Dust = () => {
-  const [position, setPosition] = useState({});
   const [dust, setDust] = useState({});
 
   useEffect(() => {
-    new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition((currentPosition) => {
-        setPosition({
-          latitude: currentPosition.coords.latitude,
-          longitude: currentPosition.coords.longitude,
-        });
-        resolve(currentPosition.coords);
-      });
-    }).then((coords) => {
-      /* API 요청 시작 */
-      fetch(
-        `https://dapi.kakao.com/v2/local/geo/transcoord.json?x=${coords.longitude}&y=${coords.latitude}&input_coord=WGS84&output_coord=TM`,
-        {
-          headers: {
-            Authorization: `KakaoAK ${KAKAO_API_KEY}`,
-          },
-        }
-      )
-        .then((res) => res.json())
-        .then((json) => {
-          // console.log(json.documents[0]);
-          const coord = json.documents[0];
-          fetch(
-            `http://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getNearbyMsrstnList?tmX=${Number(
-              coord.x
-            )}&tmY=${Number(coord.y)}&returnType=json&serviceKey=${API_KEY}`
-          )
-            .then((res) => res.json())
-            .then((json) => {
-              //console.log(json.response.body.items[0].stationName);
-              const station = json.response.body.items[0].stationName;
-              fetch(
-                `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?serviceKey=${API_KEY}&returnType=json&numOfRows=100&pageNo=1&stationName=${station}&dataTerm=DAILY&ver=1.0`
-              )
-                .then((res) => res.json())
-                .then((json) => {
-                  const grade = json.response.body.items[0].pm10Grade;
-                  setDust(grade);
-                });
-            });
-        });
-    });
+    fetch(
+      `${BASE_URL}sidoName=서울&pageNo=1&numOfRows=100&returnType=json&serviceKey=${API_KEY}&ver=1.3`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        setDust(data.response.body.items[2]);
+      })
+      .catch((error) => console.log('error:', error));
   }, []);
 
   const dustGrade = () => {
-    if (dust === '1') {
+    if (`${dust.pm10Grade}` === '1') {
       return '좋음';
-    } else if (dust === '2') {
+    } else if (`${dust.pm10Grade}` === '2') {
       return '보통';
-    } else if (dust === '3') {
+    } else if (`${dust.pm10Grade}` === '3') {
       return '나쁨';
-    } else if (dust === '4') {
+    } else if (`${dust.pm10Grade}` === '4') {
       return '매우나쁨';
     } else {
       return 'Loading...';
     }
   };
-  return <div className="Dust">{<div>미세먼지 {`${dustGrade()}`} </div>}</div>;
+
+  return (
+    <div className="Dust">
+      <div>미세먼지 {`${dustGrade()}`} </div>
+    </div>
+  );
 };
 
 export default Dust;
