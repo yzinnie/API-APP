@@ -87,7 +87,7 @@ body {
 .Header ul {
   list-style: none;
   padding: 10px;
-  height: 89vh;
+  height: 100vh;
 }
 
 .Header li {
@@ -214,6 +214,10 @@ body {
 }
 
 /*CheckList*/
+.CheckList {
+  padding-top: 60px;
+}
+
 .todo-list {
   list-style: none;
   padding: 0;
@@ -227,7 +231,6 @@ body {
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 10px;
-  width: 380px;
 }
 
 .CheckList button {
@@ -241,34 +244,17 @@ body {
 
 .CheckList input {
   border: 1px solid black;
-  width: 300px;
+  width: 340px;
   height: 50px;
   margin-right: 50px;
   font-size: 16px;
 }
 
 .check-form {
-  padding-top: 30px;
-  padding-left: 10px;
   height: 550px;
 }
 
 .check-form p {
   color: #868585;
   font-size: 16.5px;
-}
-
-/* INFO */
-.Info {
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-}
-
-.Info img {
-  width: 150px;
-}
-
-.info-text {
-  border-bottom: 1px solid #83838328;
 }

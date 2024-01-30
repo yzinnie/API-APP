@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Header from '../components/Header';
 
 const CheckList = () => {
   const [todos, setTodos] = useState(
@@ -39,9 +38,8 @@ const CheckList = () => {
   };
   return (
     <div className="CheckList">
-      <Header />
+      <h3>체크리스트</h3>
       <div className="check-form">
-        <h3>체크리스트</h3>
         <p>
           산책에 필요한 물건? 나가서 구매할 간식? <br />
           자유롭게 모든 것들을 Check ! 🖤
