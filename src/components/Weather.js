@@ -13,7 +13,7 @@ const Weather = () => {
   const [maxTemp, setMaxTemp] = useState({});
 
   useEffect(() => {
-    new Promise((resolve, reject) => {
+    new Promise((resolve) => {
       navigator.geolocation.getCurrentPosition((currentPosition) => {
         setPosition({
           latitude: currentPosition.coords.latitude,
@@ -22,13 +22,11 @@ const Weather = () => {
         resolve(currentPosition.coords);
       });
     }).then((coords) => {
-      /* 날씨 API 요청하기 */
       fetch(
         `${BASE_URL}lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}&lang=kr&units=metric`
       )
         .then((response) => response.json())
         .then((json) => {
-          // console.log(json);
           setName(json.name);
           setWeather(json.weather[0]);
           setTemp(Math.floor(json.main.temp));

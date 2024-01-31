@@ -15,7 +15,6 @@ const NewsAPI = () => {
         },
       })
       .then((data) => {
-        // console.log(data);
         setNews(data.data.items);
         setLoading(false);
       })

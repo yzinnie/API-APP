@@ -68,7 +68,7 @@ const MapKakao = () => {
     } else {
       setState((prev) => ({
         ...prev,
-        errMsg: 'geolocation을 사용할수 없어요..',
+        errMsg: 'geolocation Error!',
         isLoading: false,
       }));
     }

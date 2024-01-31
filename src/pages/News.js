@@ -6,7 +6,6 @@ const News = () => {
   return (
     <div>
       <Header />
-
       <div className="search-box">
         <p>
           <TypeAnimation

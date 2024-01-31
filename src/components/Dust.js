@@ -8,7 +8,7 @@ const Dust = () => {
   const [dust, setDust] = useState({});
 
   useEffect(() => {
-    new Promise((resolve, reject) => {
+    new Promise((resolve) => {
       navigator.geolocation.getCurrentPosition((currentPosition) => {
         setPosition({
           latitude: currentPosition.coords.latitude,
@@ -28,7 +28,6 @@ const Dust = () => {
       )
         .then((res) => res.json())
         .then((json) => {
-          // console.log(json.documents[0]);
           const coord = json.documents[0];
           fetch(
             `http://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getNearbyMsrstnList?tmX=${Number(
@@ -37,14 +36,12 @@ const Dust = () => {
           )
             .then((res) => res.json())
             .then((json) => {
-              // console.log(json.response.body.items[0].stationName);
               const station = json.response.body.items[0].stationName;
               fetch(
                 `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?serviceKey=${API_KEY}&returnType=json&numOfRows=100&pageNo=1&stationName=${station}&dataTerm=DAILY&ver=1.0`
               )
                 .then((res) => res.json())
                 .then((json) => {
-                  // console.log(json.response.body.items[0]);
                   const grade = json.response.body.items[0].pm10Grade;
                   setDust(grade);
                 });
