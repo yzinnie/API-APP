@@ -9,7 +9,7 @@ const News = () => {
       <div className="search-box">
         <p>
           <TypeAnimation
-            sequence={['네이버에 반려견을 검색했어요', 1000]}
+            sequence={['반려동물을 검색했어요', 1000]}
             speed={13}
             wrapper="span"
             cursor={false}
