@@ -25,7 +25,7 @@ const Header = () => {
         <ul className={isOpen ? 'navLinks showNav' : 'hidden'}>
           <li onClick={() => navigate('/info')}>산 check?</li>
           <li onClick={() => navigate('/checkList')}>체크리스트</li>
-          <li onClick={() => navigate('/news')}>오늘의 반려견 뉴스</li>
+          <li onClick={() => navigate('/news')}>반려동물을 검색했어요</li>
         </ul>
       </div>
     </div>

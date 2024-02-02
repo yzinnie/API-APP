@@ -30,7 +30,7 @@ const Dust = () => {
         .then((json) => {
           const coord = json.documents[0];
           fetch(
-            `http://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getNearbyMsrstnList?tmX=${Number(
+            `https://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getNearbyMsrstnList?tmX=${Number(
               coord.x
             )}&tmY=${Number(coord.y)}&returnType=json&serviceKey=${API_KEY}`
           )

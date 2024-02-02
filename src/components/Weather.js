@@ -27,7 +27,6 @@ const Weather = () => {
       )
         .then((response) => response.json())
         .then((json) => {
-          console.log(json.weather[0].icon);
           setName(json.name);
           setWeather(json.weather[0]);
           setTemp(Math.floor(json.main.temp));
