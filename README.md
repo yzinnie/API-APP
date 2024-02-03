@@ -64,6 +64,13 @@ https://san-check.web.app/
 
 ---
 
+<h4>시작하기</h4>
+
+```
+npm install
+npm start
+```
+
 <h4>🐧 노션에 기록한 개발일기</h4>
 
 https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
