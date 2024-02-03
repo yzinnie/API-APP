@@ -64,7 +64,7 @@ https://san-check.web.app/
 
 ---
 
-<h4>시작하기</h4>
+<h4>Getting started</h4>
 
 ```
 npm install
