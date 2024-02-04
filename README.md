@@ -78,7 +78,7 @@ npm start
 ##### 네이버 API 사용시 발생하는 에러
 ##### CORS ? Cross-Origin Resource Sharing - 다른 출처 (protocol, host, port번호가 다른 경우) 오류 발생
 ##### 프론트에서 해결하기 - 라이브러리 사용 (http-proxy-middleware) 또는 json 파일에 proxy 설정 <-- 모두 개발환경에서만 정상작동
-##### 배포하면서 에러 해결 못 함 = 다른 API를 사용했음
+##### 배포 환경에서 에러 해결 실패 = 다른 API를 사용했음
 
 - [ ] Mixed Content
 #####  배포된 https에 암호화 되지 않은 http사이트(미먼API)에서 요청을 보냄
