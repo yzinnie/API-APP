@@ -71,7 +71,18 @@ npm install
 npm start
 ```
 
-<h4>🐧 노션에 기록한 개발일기</h4>
+---
+<h4>Error Note</h4>
 
-https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
+- [ ] API - CORS ERROR
+##### 네이버 API 사용시 발생하는 에러
+##### CORS ? Cross-Origin Resource Sharing - 다른 출처 (protocol,host,port번호가 다른 경우) 오류 발생
+##### 프론트에서 해결하기 - 라이브러리 사용 (http-proxy-middleware) 또는 json 파일에 proxy 설정 <-- 모두 개발환경에서만 정상작동(😭)
+##### 배포하면서 에러 해결 못 함 = 다른 API를 사용했음
 
+- [ ] Mixed Content
+#####  배포된 https에 암호화 되지 않은 http사이트(미먼API)에서 요청을 보냄
+##### URL을 수정하면서 해결 완료
+##### 배포 완료
+
+##### 그 외의 해결된 (작은) 오류들 <br/> https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
