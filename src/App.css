@@ -96,6 +96,11 @@ body {
   font-weight: bold;
 }
 
+.Header a {
+  color: #000000;
+  text-decoration: none;
+}
+
 .menu {
   width: 100%;
   min-width: 450px;
