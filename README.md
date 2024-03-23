@@ -19,9 +19,9 @@ https://san-check.web.app/
 <br>
 <h2> 😺 화면 구성</h2>
 
-| 시작 페이지 | 메인 페이지 | 정보 글 페이지 |
-| --- | --- | --- |
-| <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/74137ea0-696b-4059-bb2e-dd9251bfc343" width="500" /> | <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/dcd7dfaa-5daa-433e-aa9b-04f3f26c1c02" width="500" /> |  <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/4cc083d3-4c06-46eb-8096-c86bfead2542" width="500" /> |
+| 시작 페이지 | 메인 페이지 | 정보 글 페이지 | 체크리스트 |
+| --- | --- | --- | --- |
+| <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/74137ea0-696b-4059-bb2e-dd9251bfc343" width="500" /> | <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/dcd7dfaa-5daa-433e-aa9b-04f3f26c1c02" width="500" /> |  <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/4cc083d3-4c06-46eb-8096-c86bfead2542" width="500" /> | ![image](https://github.com/yzinnie/SAN-CHECK/assets/126447980/4f178b00-475e-4e16-b9a7-c1b3bf7bf8c5) |
 <br>
 
 <h2> API </h2>
