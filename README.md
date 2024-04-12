@@ -19,9 +19,9 @@ https://san-check.web.app/
 <br>
 <h2> 😺 화면 구성</h2>
 
-| 시작 페이지 | 메인 페이지 | 정보 글 페이지 |  체크리스트 페이지 | 소개 페이지 |
-| --- | --- | --- | --- | --- |
-| <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/74137ea0-696b-4059-bb2e-dd9251bfc343" width="500" /> | <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/dcd7dfaa-5daa-433e-aa9b-04f3f26c1c02" width="500" /> |  <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/87f2564b-8281-4b83-9256-9446f25e94e3" width="500" /> |<img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/4f178b00-475e-4e16-b9a7-c1b3bf7bf8c5" width="500" /> |<img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/6430a20a-77cb-4897-8e26-2ca5731de918" width="500" /> |
+| 시작 페이지 | 메인 페이지 | 정보 글 페이지 | 체크리스트 |
+| --- | --- | --- | --- |
+| <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/74137ea0-696b-4059-bb2e-dd9251bfc343" width="500" /> | <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/dcd7dfaa-5daa-433e-aa9b-04f3f26c1c02" width="500" /> |  <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/4cc083d3-4c06-46eb-8096-c86bfead2542" width="500" /> | ![image](https://github.com/yzinnie/SAN-CHECK/assets/126447980/4f178b00-475e-4e16-b9a7-c1b3bf7bf8c5) |
 <br>
 
 <h2> API </h2>
@@ -72,17 +72,18 @@ npm start
 ```
 
 ---
-<h4>Error Note</h4>
+<h4>deploy error</h4>
 
 - [ ] API - CORS ERROR
-##### 네이버 API 사용시 발생하는 에러
-##### CORS ? Cross-Origin Resource Sharing - 다른 출처 (protocol, host, port번호가 다른 경우) 오류 발생
-##### 프론트에서 해결하기 - 라이브러리 사용 (http-proxy-middleware) 또는 json 파일에 proxy 설정 <-- 모두 개발환경에서만 정상작동
-##### 배포 환경에서 에러 해결 실패 = 다른 API를 사용했음
+- 네이버 API 사용시 발생하는 에러
+- CORS ? Cross-Origin Resource Sharing - 다른 출처 (protocol, host, port번호가 다른 경우) 오류 발생
+- 프론트에서 해결하기 - 라이브러리 사용 (http-proxy-middleware) 또는 json 파일에 proxy 설정 <-- 모두 개발환경에서만 정상작동
+- 배포 환경에서 에러 해결 실패
+- 결론은 다른 API를 사용했음
 
-- [ ] Mixed Content
-#####  배포된 https에 암호화 되지 않은 http사이트(미먼API)에서 요청을 보냄
-##### URL을 수정하면서 해결 완료
-##### 배포 완료
+- [x] Mixed Content
+-  배포된 https에 암호화 되지 않은 http사이트(미먼API)에서 요청을 보냄
+- URL을 수정하면서 해결 완료
+- 배포 에러 해결
 
-##### 그 외의 해결된 (작은) 오류들 <br/> https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
+##### error note <br/> https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
