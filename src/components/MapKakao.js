@@ -75,7 +75,7 @@ const MapKakao = () => {
   }, []);
 
   return (
-    <div>
+    <div className="Map">
       <h3>오늘의 산책 코스</h3>
       <Map center={state.center} level={3} className="Map">
         {!state.isLoading && (

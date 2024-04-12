@@ -51,7 +51,6 @@ body {
 }
 
 .Home .home-button {
-  /* font-family: 'Open Sans', sans-serif; */
   background: rgb(0, 0, 0);
   color: #ffffff;
   width: 200px;
@@ -91,7 +90,10 @@ body {
 }
 
 .Header li {
-  padding: 20px 0 19px 26px;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  padding: 20px 0 19px 5px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -193,7 +195,6 @@ body {
   width: 24px;
   height: 24px;
   padding-right: 12px;
-  cursor: pointer;
 }
 
 .NewsAPI {

@@ -2,13 +2,15 @@ import React from 'react';
 import Header from '../components/Header';
 import Weather from '../components/Weather';
 import MapKakao from '../components/MapKakao';
-import NewHeader from '../components/NewHeader';
 
 const Main = () => {
   return (
-    <div>
+    <div className="Main">
       <Header />
-      <NewHeader />
+      <h3>
+        산책가기 전 <br />
+        check하는 공간이다 멍!
+      </h3>
       <Weather />
       <MapKakao />
     </div>

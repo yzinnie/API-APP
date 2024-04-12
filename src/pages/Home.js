@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();
+
   return (
     <div className="Home">
       <img
@@ -10,7 +11,7 @@ const Home = () => {
         alt="logo"
       />
       <button className="home-button" onClick={() => navigate('/main')}>
-        산 Check 하러 가자 !
+        산쳌 하러 가자 !
       </button>
     </div>
   );
