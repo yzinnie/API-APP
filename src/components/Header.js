@@ -42,7 +42,6 @@ const Header = () => {
             체크리스트
           </li>
           <li onClick={() => navigate('/news')}>
-            {' '}
             <img
               src={process.env.PUBLIC_URL + `assets/menu-icon-search.png`}
               alt="iconSearch"

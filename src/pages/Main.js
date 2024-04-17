@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Weather from '../components/Weather';
 import MapKakao from '../components/MapKakao';
 
 const Main = () => {
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setShow(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="Main">
+      {show && (
+        <div className="Home">
+          <img
+            className="home-img"
+            src={process.env.PUBLIC_URL + `assets/logo.png`}
+            alt="logo"
+          />
+          <p>산쳌 하러 가자 !</p>
+        </div>
+      )}
       <Header />
       <h3>
         산책가기 전 <br />
