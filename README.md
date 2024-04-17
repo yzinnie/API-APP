@@ -5,17 +5,17 @@
 <img src="https://github.com/yzinnie/SAN-CHECK/assets/126447980/dd4fcec2-00e5-4a01-bc2f-e8b8e50cc8eb" width="200" />
 </div>
 
-<h4>배포 주소</h4>
-https://san-check.web.app/
+> <h4>배포 주소</h4>
+> https://san-check.web.app/
 
 <br>
 
 <h2> 🐈 프로젝트 소개</h2>
-<h5>산책 만족도를 위해 항상 체크하는 것들을 한 번에 할 수 있어요!</h5>
+<h4>산책 만족도를 위해 항상 체크하는 것들을 한 번에 할 수 있어요!</h4>
 
-<h5>지금의 날씨와 미세먼지는 어떤지 확인하고, 오늘의 산책 코스를 미리 정하고 나가볼까요?</h5>
-<h5>다른 견주들이 올려준 정보 공유성 블로그 글을 확인할 수 있어요! 👀</h5>
-<h5>챙겨야 하는 산책 준비물이나, 나가서 사와야 하는 간식 등등.. 뭐든지 적을 수 있는 체크리스트까지 🐾 </h5>
+<h4>지금의 날씨와 미세먼지는 어떤지 확인하고, 오늘의 산책 코스를 미리 정하고 나가볼까요?</h4>
+<h4>다른 견주들이 올려준 정보 공유성 블로그 글을 확인할 수 있어요! 👀</h4>
+<h4>챙겨야 하는 산책 준비물이나, 나가서 사와야 하는 간식 등등.. 뭐든지 적을 수 있는 체크리스트까지 🐾 </h4>
 <br>
 <h2> 😺 화면 구성</h2>
 
@@ -35,7 +35,7 @@ https://san-check.web.app/
 - https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide
 - https://developers.kakao.com/docs/latest/ko/local/dev-guide#coord-to-district
 - ✳ REST API 
-- 행정구역 정보 (좌표변환)
+- 행정구역 정보 (TM 좌표변환)
 - 블로그 글 검색기능 
 - ✳ MAP API 
 - 현재 위치
@@ -44,7 +44,8 @@ https://san-check.web.app/
 
 #### 한국환경공단 (미세먼지)
 - https://www.data.go.kr/index.do
-- 현재 위치의 미세먼지 정보
+- 현재 위치의 행정구역 정보 조회
+- 미세먼지 정보
 <br>
  <h2> 🐶 Stacks </h2>
  
@@ -72,18 +73,19 @@ npm start
 ```
 
 ---
-<h4>deploy error</h4>
+<h4>Deploy error</h4>
 
-- [ ] API - CORS ERROR
-- 네이버 API 사용시 발생하는 에러
-- CORS ? Cross-Origin Resource Sharing - 다른 출처 (protocol, host, port번호가 다른 경우) 오류 발생
-- 프론트에서 해결하기 - 라이브러리 사용 (http-proxy-middleware) 또는 json 파일에 proxy 설정 <-- 모두 개발환경에서만 정상작동
+- [ ] CORS ERROR
+- 네이버 API 사용시 발생되는 에러
+- CORS - Cross-Origin Resource Sharing : 다른 출처 (protocol, host, port번호가 다른 경우) 오류 발생
+> 에러 대응 방법 참고 링크 -  https://docs.tosspayments.com/resources/glossary/cors
+>> 라이브러리 사용 (http-proxy-middleware) 또는 json 파일에 proxy 설정 👈🏻 모두 개발환경에서만 정상작동 
 - 배포 환경에서 에러 해결 실패
-- 결론은 다른 API를 사용했음
+- 다른 API(카카오 블로그 API)를 사용
 
-- [x] Mixed Content
--  배포된 https에 암호화 되지 않은 http사이트(미먼API)에서 요청을 보냄
+- [x] Mixed Content ERROR
+- 배포된 https에 암호화 되지 않은 http에서 요청을 보냄 (API URL)
 - URL을 수정하면서 해결 완료
-- 배포 에러 해결
+- 배포 에러 해결 
 
-##### error note <br/> https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
+##### 에러 노트를 작성했습니다. 📓 <br/> https://www.notion.so/yyjh222/SAN-CHECK-7f7bf17ec21641469f3942ad3ee4b576
