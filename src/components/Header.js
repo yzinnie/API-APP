@@ -12,7 +12,7 @@ const Header = () => {
     <div className="Header">
       <img
         src={process.env.PUBLIC_URL + `assets/icon-header.png`}
-        onClick={() => navigate('/main')}
+        onClick={() => navigate('/')}
         alt="iconHeader"
       />
       <img

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Weather from '../components/Weather';
 import MapKakao from '../components/MapKakao';
+import Home from './Home';
 
 const Main = () => {
   const [show, setShow] = useState(true);
@@ -18,16 +19,7 @@ const Main = () => {
 
   return (
     <div className="Main">
-      {show && (
-        <div className="Home">
-          <img
-            className="home-img"
-            src={process.env.PUBLIC_URL + `assets/logo.png`}
-            alt="logo"
-          />
-          <p>산쳌 하러 가자 !</p>
-        </div>
-      )}
+      {show && <Home />}
       <Header />
       <h3>
         산책가기 전 <br />
